@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex use</title>
+    <script src="https://kit.fontawesome.com/76249839c9.js" crossorigin="anonymous"></script>
+    <style>
+        .login-container{
+
+        display: flex;
+        justify-content: center;
+        }
+         
+        /* firstly login form k felx kore colum wise kora hoese then login container puro jinista k center rakha hoese */
+        .login-form{
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        .login-form input, button{
+          font-size: 1.3em;
+         
+          margin-top: 15px; 
+          border: 1px solid grey;
+          padding-left: 10px;
+          border-radius: 10px;
+
+        }
+        .login-form button{
+            background-color: orange ;
+            color: white;
+            font-weight: 700;
+            padding: 5px;
+            border: 0px;
+        }
+        nav{
+             display: flex; 
+               
+             /* flex korar por icon duita k right e near jonno  justify-content: space-between use kora hoese  */
+             justify-content: space-between;
+        }
+        nav a{
+
+            /* link er nicher underscore soranor jonno text decoration none dea hoese */
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            margin-right: 15px;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- ekhne nav er dita child duita span, font image k right e nie jawar jonno div or span use korte hbe  -->
+            <span>
+                <a href="">Home</a>
+                <a href="">Products</a>
+                <a href="">Orders</a>
+                <a href="">About us</a>
+            </span>
+
+            <span>
+                <a href=""><i class="fas fa-user-alt"></i></a>
+                <a href=""><i class="fas fa-sign-out-alt"></i></i></a>
+            </span>
+        </nav>
+    </header>
+    <section class="login-container">
+        <form action="" class="login-form">
+            <h2>Login</h2>
+            <input type="email" name="email" placeholder="Your Email" id="" required>
+            <input type="password" name="password" placeholder="Your Password" id="" required>
+            <button type="submit">Login</button>
+            
+
+        </form>
+    </section>
+</body>
+</html>
